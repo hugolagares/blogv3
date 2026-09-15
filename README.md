@@ -12,7 +12,7 @@ no Ranking 100+ Poderosos do Turismo 2025 (PANROTAS).
 ## Estrutura do repositório
 
 - `index.html` — página principal (one-page)
-- `hugo-lagares.jpg` — foto de perfil exibida no hero
+- `hugo-lagares.jpeg` — foto de perfil exibida no hero
 
 ## Publicação
 
