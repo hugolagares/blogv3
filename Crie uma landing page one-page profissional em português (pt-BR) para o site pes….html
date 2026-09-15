@@ -1,0 +1,2655 @@
+<!DOCTYPE html>
+<html lang="pt-BR" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hugo Lagares | Viagens & Negócios — Autoridade em Turismo Brasileiro</title>
+  <meta name="description" content="Hugo Lagares — mais de 23 anos de experiência no turismo brasileiro. Executivo, consultor e palestrante. Autoridade em viagens e negócios.">
+  <meta name="author" content="Hugo Lagares">
+  <link rel="canonical" href="https://hugolagares.com/">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Hugo Lagares — Viagens & Negócios">
+  <meta property="og:description" content="Mais de 23 anos transformando o mercado de turismo brasileiro. Executivo, consultor e palestrante.">
+  <meta property="og:url" content="https://hugolagares.com/">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="https://hugolagares.com/hugo-lagares.jpg">
+  <meta property="og:locale" content="pt_BR">
+
+  <!-- Allowed External Fonts & Basecoat UI -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,600;0,700;1,500&display=swap">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/basecoat-css@1.0.2/dist/basecoat.cdn.min.css">
+  
+  <!-- System Shell CSS & JS -->
+  <style>
+/* Skip artifact shell — fixed styles served beside every artifact.
+   Complements basecoat; artifacts override --accent for their own identity. */
+:root {
+  color-scheme: light dark;
+  --accent: #2563eb;
+  --accent-contrast: #ffffff;
+  --accent-text: color-mix(in srgb, var(--accent) 72%, #000);
+  --bg: #f8f9fb;
+  --surface: #ffffff;
+  --text: #14171f;
+  --text-muted: #5b6472;
+  --border: rgba(20, 23, 31, 0.10);
+  --radius: 10px;
+  --shadow: 0 1px 3px rgba(20, 23, 31, 0.08);
+  --space: 16px;
+}
+/* Theme resolution. Without data-theme the viewer's system preference decides,
+   as it always did. With it, the artifact's own choice wins in BOTH directions:
+   a page that hardcodes one palette must not be handed the opposite set of
+   tokens by the machine it happens to be opened on. The dark values appear
+   twice because a media query cannot be folded into a selector list.
+   The attribute sits inside :where() so these blocks keep the specificity of a
+   bare :root — the page's own <style> is linked after this file and must go on
+   overriding any token it wants, exactly as it could before. */
+@media (prefers-color-scheme: dark) {
+  :root:where(:not([data-theme="light"])) {
+    --accent-text: color-mix(in srgb, var(--accent) 78%, #fff);
+    --bg: #101318;
+    --surface: #181c23;
+    --text: #eef1f6;
+    --text-muted: #9aa4b2;
+    --border: rgba(238, 241, 246, 0.12);
+    --shadow: 0 1px 3px rgba(0, 0, 0, 0.4);
+  }
+}
+:root:where([data-theme="dark"]) {
+  color-scheme: dark;
+  --accent-text: color-mix(in srgb, var(--accent) 78%, #fff);
+  --bg: #101318;
+  --surface: #181c23;
+  --text: #eef1f6;
+  --text-muted: #9aa4b2;
+  --border: rgba(238, 241, 246, 0.12);
+  --shadow: 0 1px 3px rgba(0, 0, 0, 0.4);
+}
+:root:where([data-theme="light"]) { color-scheme: light; }
+* { box-sizing: border-box; }
+html, body { margin: 0; padding: 0; }
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  line-height: 1.55;
+  -webkit-font-smoothing: antialiased;
+}
+img { max-width: 100%; display: block; }
+
+.shell-container { max-width: 1100px; margin: 0 auto; padding: 0 20px; }
+.shell-section { padding: calc(var(--space) * 2) 0; }
+.shell-grid { display: grid; gap: var(--space); grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); }
+.shell-toolbar { display: flex; flex-wrap: wrap; gap: 10px; align-items: center; margin-bottom: var(--space); }
+.shell-footer { padding: 24px 0 40px; color: var(--text-muted); font-size: 13px; }
+
+.shell-hero { padding: calc(var(--space) * 3) 0 calc(var(--space) * 2); }
+.shell-hero h1 { font-size: clamp(26px, 4vw, 40px); line-height: 1.15; margin: 0 0 10px; text-wrap: balance; }
+.shell-hero p { color: var(--text-muted); max-width: 60ch; margin: 0; }
+
+.panel {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  padding: var(--space);
+}
+
+.kpi { display: flex; flex-direction: column; gap: 4px; }
+.kpi .kpi-value { font-size: 28px; font-weight: 650; line-height: 1.1; }
+.kpi .kpi-label { font-size: 13px; color: var(--text-muted); }
+.kpi .kpi-delta { font-size: 12.5px; font-weight: 600; }
+.kpi .kpi-delta.up { color: #0a8f3c; }
+.kpi .kpi-delta.down { color: #cf3131; }
+
+table.shell-table { border-collapse: collapse; width: 100%; font-size: 14px; }
+table.shell-table th {
+  text-align: left; font-size: 11.5px; letter-spacing: 0.05em; text-transform: uppercase;
+  color: var(--text-muted); font-weight: 600;
+}
+table.shell-table th, table.shell-table td { padding: 9px 12px 9px 0; border-bottom: 1px solid var(--border); }
+table.shell-table td.num, table.shell-table th.num { text-align: right; font-variant-numeric: tabular-nums; }
+table.shell-table tbody tr:hover { background: color-mix(in srgb, var(--accent) 6%, transparent); }
+
+.chart-box { width: 100%; min-height: 220px; }
+.chart-box svg { width: 100%; height: auto; display: block; }
+
+.muted { color: var(--text-muted); }
+.accent { color: var(--accent-text); }
+.shell-badge {
+  display: inline-flex; align-items: center; gap: 6px;
+  font-size: 12px; font-weight: 600; padding: 3px 10px; border-radius: 999px;
+  background: color-mix(in srgb, var(--accent) 12%, transparent); color: var(--accent-text);
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .shell-fade { animation: shell-fade 400ms ease both; }
+  @keyframes shell-fade { from { opacity: 0; transform: translateY(6px); } to { opacity: 1; transform: none; } }
+}
+
+</style>
+  
+
+  <style>
+    :root {
+      --accent: #b47514;
+      --accent-text: #875204;
+      --accent-contrast: #ffffff;
+      --navy-900: #0a1b2a;
+      --navy-800: #0f2a43;
+      --navy-700: #173b5d;
+      --teal-800: #0d4a4e;
+      --teal-600: #12666a;
+      --sand-50: #fbfaf7;
+      --sand-100: #f4f1ea;
+      --sand-200: #e9e3d6;
+      --border: #e2ded5;
+      --font-serif: 'Playfair Display', Georgia, serif;
+      --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    }
+
+    body {
+      font-family: var(--font-sans);
+      color: #212529;
+      background-color: var(--sand-50);
+      margin: 0;
+      padding: 0;
+      overflow-x: hidden;
+      line-height: 1.6;
+      scroll-behavior: smooth;
+    }
+
+    h1, h2, h3, .font-serif {
+      font-family: var(--font-serif);
+      color: var(--navy-800);
+      letter-spacing: -0.01em;
+    }
+
+    /* Fixed Navigation Header */
+    .site-header {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      background: rgba(251, 250, 247, 0.94);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      border-bottom: 1px solid rgba(226, 222, 213, 0.8);
+      transition: all 0.3s ease;
+    }
+
+    .nav-container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0.9rem 1.5rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      text-decoration: none;
+      color: var(--navy-800);
+    }
+
+    .brand-mark {
+      width: 40px;
+      height: 40px;
+      background: linear-gradient(135deg, var(--navy-800), var(--teal-800));
+      color: #ffffff;
+      border-radius: 8px;
+      display: grid;
+      place-items: center;
+      font-family: var(--font-serif);
+      font-weight: 700;
+      font-size: 1.15rem;
+      letter-spacing: 0.5px;
+      box-shadow: 0 2px 6px rgba(15, 42, 67, 0.2);
+    }
+
+    .brand-text {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .brand-title {
+      font-family: var(--font-serif);
+      font-weight: 700;
+      font-size: 1.25rem;
+      line-height: 1.1;
+      color: var(--navy-800);
+    }
+
+    .brand-subtitle {
+      font-size: 0.72rem;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      color: var(--accent-text);
+      font-weight: 600;
+    }
+
+    .nav-menu {
+      display: flex;
+      align-items: center;
+      gap: 1.75rem;
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+
+    .nav-link {
+      font-size: 0.93rem;
+      font-weight: 500;
+      color: #334155;
+      text-decoration: none;
+      transition: color 0.2s ease;
+      position: relative;
+      padding: 0.25rem 0;
+    }
+
+    .nav-link:hover, .nav-link:focus-visible {
+      color: var(--navy-800);
+    }
+
+    .nav-link::after {
+      content: '';
+      position: absolute;
+      left: 0;
+      bottom: -2px;
+      width: 0%;
+      height: 2px;
+      background: var(--accent);
+      transition: width 0.25s ease;
+    }
+
+    .nav-link:hover::after {
+      width: 100%;
+    }
+
+    .btn-cta-nav {
+      background: var(--navy-800);
+      color: #ffffff;
+      padding: 0.55rem 1.2rem;
+      border-radius: 6px;
+      font-size: 0.88rem;
+      font-weight: 600;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      transition: all 0.2s ease;
+      border: 1px solid transparent;
+    }
+
+    .btn-cta-nav:hover {
+      background: var(--teal-800);
+      color: #ffffff;
+      transform: translateY(-1px);
+      box-shadow: 0 4px 12px rgba(13, 74, 78, 0.25);
+    }
+
+    .mobile-menu-toggle {
+      display: none;
+      background: none;
+      border: none;
+      padding: 0.5rem;
+      cursor: pointer;
+      color: var(--navy-800);
+    }
+
+    /* Hero Section */
+    .hero-section {
+      position: relative;
+      background: linear-gradient(160deg, #fdfbf7 0%, #f4f0e6 60%, #eae3d2 100%);
+      padding: 4.5rem 1.5rem 5.5rem;
+      overflow: hidden;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .hero-bg-accent {
+      position: absolute;
+      top: -100px;
+      right: -100px;
+      width: 500px;
+      height: 500px;
+      background: radial-gradient(circle, rgba(180, 117, 20, 0.12) 0%, rgba(13, 74, 78, 0.05) 45%, transparent 70%);
+      border-radius: 50%;
+      pointer-events: none;
+    }
+
+    .hero-grid {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1.15fr 0.85fr;
+      align-items: center;
+      gap: 3.5rem;
+      position: relative;
+      z-index: 2;
+    }
+
+    .hero-eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      background: rgba(180, 117, 20, 0.12);
+      border: 1px solid rgba(180, 117, 20, 0.3);
+      color: var(--accent-text);
+      padding: 0.35rem 0.85rem;
+      border-radius: 50px;
+      font-size: 0.82rem;
+      font-weight: 700;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      margin-bottom: 1.25rem;
+    }
+
+    .hero-title {
+      font-size: clamp(2.5rem, 4.2vw, 3.75rem);
+      font-weight: 700;
+      line-height: 1.08;
+      margin: 0 0 0.5rem 0;
+      color: var(--navy-900);
+    }
+
+    .hero-subtitle {
+      font-size: clamp(1.2rem, 2vw, 1.45rem);
+      font-weight: 600;
+      color: var(--teal-800);
+      margin-bottom: 1.25rem;
+    }
+
+    .hero-impact {
+      font-size: 1.12rem;
+      line-height: 1.7;
+      color: #334155;
+      max-width: 580px;
+      margin-bottom: 1rem;
+      font-weight: 500;
+    }
+
+    .hero-credentials-strip {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 0.5rem;
+      font-size: 0.88rem;
+      line-height: 1.5;
+      color: var(--teal-800);
+      background: rgba(13, 74, 78, 0.08);
+      border: 1px solid rgba(13, 74, 78, 0.18);
+      border-radius: 8px;
+      padding: 0.7rem 0.95rem;
+      margin-bottom: 1.85rem;
+      font-weight: 600;
+      max-width: 580px;
+    }
+
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      align-items: center;
+    }
+
+    .btn-gold {
+      background: linear-gradient(135deg, #c5841e, #a3660d);
+      color: #ffffff;
+      padding: 0.85rem 1.6rem;
+      border-radius: 8px;
+      font-weight: 600;
+      font-size: 0.95rem;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      box-shadow: 0 4px 14px rgba(180, 117, 20, 0.3);
+      transition: all 0.2s ease;
+      border: none;
+    }
+
+    .btn-gold:hover {
+      background: linear-gradient(135deg, #b07416, #8f5608);
+      color: #ffffff;
+      transform: translateY(-2px);
+      box-shadow: 0 6px 18px rgba(180, 117, 20, 0.4);
+    }
+
+    .btn-outline-navy {
+      background: transparent;
+      border: 1.5px solid var(--navy-800);
+      color: var(--navy-800);
+      padding: 0.82rem 1.5rem;
+      border-radius: 8px;
+      font-weight: 600;
+      font-size: 0.95rem;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      transition: all 0.2s ease;
+    }
+
+    .btn-outline-navy:hover {
+      background: var(--navy-800);
+      color: #ffffff;
+      transform: translateY(-2px);
+    }
+
+    /* Photo Placeholder with Luxury Styling */
+    .hero-portrait-card {
+      position: relative;
+      margin: 0 auto;
+      max-width: 380px;
+      width: 100%;
+    }
+
+    .portrait-frame {
+      aspect-ratio: 4 / 5;
+      background: linear-gradient(145deg, var(--navy-800) 0%, var(--teal-800) 55%, #1d2d3d 100%);
+      border-radius: 18px;
+      box-shadow: 0 20px 45px rgba(15, 42, 67, 0.22);
+      position: relative;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      padding: 2rem;
+      border: 1px solid rgba(255, 255, 255, 0.15);
+    }
+
+    .portrait-pattern {
+      position: absolute;
+      inset: 0;
+      opacity: 0.08;
+      background-image: radial-gradient(#ffffff 1.5px, transparent 1.5px);
+      background-size: 20px 20px;
+      pointer-events: none;
+    }
+
+    .portrait-top {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: relative;
+      z-index: 2;
+    }
+
+    .portrait-badge {
+      background: rgba(255, 255, 255, 0.15);
+      border: 1px solid rgba(255, 255, 255, 0.25);
+      padding: 0.3rem 0.75rem;
+      border-radius: 30px;
+      color: #ffffff;
+      font-size: 0.75rem;
+      font-weight: 600;
+      letter-spacing: 0.04em;
+    }
+
+    .portrait-center {
+      text-align: center;
+      position: relative;
+      z-index: 2;
+      margin: auto 0;
+    }
+
+    .portrait-image-wrapper {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin: 0 auto 1.25rem;
+      position: relative;
+    }
+
+    .hero-photo {
+      width: 135px;
+      height: 135px;
+      border-radius: 50%;
+      object-fit: cover;
+      object-position: center 20%;
+      border: 3px solid rgba(251, 191, 36, 0.65);
+      box-shadow: 0 10px 28px rgba(0, 0, 0, 0.35), 0 0 0 4px rgba(255, 255, 255, 0.15);
+      transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+      display: block;
+    }
+
+    .hero-photo:hover {
+      transform: scale(1.04);
+      border-color: rgba(251, 191, 36, 0.95);
+      box-shadow: 0 14px 34px rgba(0, 0, 0, 0.45), 0 0 0 4px rgba(255, 255, 255, 0.25);
+    }
+
+    .portrait-monogram {
+      width: 135px;
+      height: 135px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, rgba(255, 255, 255, 0.18), rgba(180, 117, 20, 0.35));
+      border: 3px solid rgba(251, 191, 36, 0.65);
+      display: grid;
+      place-items: center;
+      font-family: var(--font-serif);
+      font-size: 3rem;
+      font-weight: 700;
+      color: #ffffff;
+      box-shadow: 0 10px 28px rgba(0, 0, 0, 0.35);
+    }
+
+    .portrait-label {
+      color: #f1f5f9;
+      font-size: 1.15rem;
+      font-weight: 600;
+      margin: 0;
+    }
+
+    .portrait-desc {
+      color: #cbd5e1;
+      font-size: 0.82rem;
+      margin: 0.3rem 0 0;
+    }
+
+    .portrait-bottom {
+      position: relative;
+      z-index: 2;
+      background: rgba(10, 27, 42, 0.55);
+      backdrop-filter: blur(8px);
+      padding: 0.75rem 1rem;
+      border-radius: 10px;
+      border: 1px solid rgba(255, 255, 255, 0.15);
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+    }
+
+    .portrait-bottom-icon {
+      color: #fbbf24;
+      flex-shrink: 0;
+    }
+
+    .portrait-bottom-text {
+      font-size: 0.78rem;
+      color: #f8fafc;
+      margin: 0;
+      line-height: 1.35;
+    }
+
+    /* Section Global Styles */
+    .section-wrap {
+      padding: 5.5rem 1.5rem;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .section-header {
+      text-align: center;
+      max-width: 720px;
+      margin: 0 auto 3.5rem;
+    }
+
+    .section-tag {
+      display: inline-block;
+      text-transform: uppercase;
+      font-size: 0.78rem;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      color: var(--accent-text);
+      margin-bottom: 0.6rem;
+    }
+
+    .section-title {
+      font-size: clamp(2rem, 3.2vw, 2.75rem);
+      margin: 0 0 1rem 0;
+      line-height: 1.2;
+    }
+
+    .section-lead {
+      color: #4b5563;
+      font-size: 1.05rem;
+      line-height: 1.7;
+      margin: 0;
+    }
+
+    /* Credentials Cards */
+    .credentials-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 1.25rem;
+      margin-top: 2.5rem;
+    }
+
+    .credential-card {
+      background: #ffffff;
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 1.6rem 1.25rem;
+      text-align: center;
+      box-shadow: 0 2px 8px rgba(15, 42, 67, 0.04);
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .credential-card:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 8px 20px rgba(15, 42, 67, 0.08);
+      border-color: #cbd5e1;
+    }
+
+    .credential-icon {
+      width: 44px;
+      height: 44px;
+      border-radius: 10px;
+      background: rgba(180, 117, 20, 0.1);
+      color: var(--accent-text);
+      display: grid;
+      place-items: center;
+      margin-bottom: 1rem;
+    }
+
+    .credential-value {
+      font-family: var(--font-serif);
+      font-size: 1.4rem;
+      font-weight: 700;
+      color: var(--navy-800);
+      margin-bottom: 0.35rem;
+      line-height: 1.2;
+    }
+
+    .credential-label {
+      font-size: 0.85rem;
+      color: #475569;
+      margin: 0;
+      line-height: 1.4;
+      font-weight: 500;
+    }
+
+    /* About Section Bio Layout */
+    .about-content-grid {
+      display: grid;
+      grid-template-columns: 1.2fr 0.8fr;
+      gap: 3.5rem;
+      align-items: start;
+    }
+
+    .bio-text-column p {
+      font-size: 1.05rem;
+      color: #334155;
+      line-height: 1.8;
+      margin-bottom: 1.35rem;
+    }
+
+    .bio-highlight-quote {
+      border-left: 4px solid var(--accent);
+      padding: 1rem 1.5rem;
+      background: #ffffff;
+      border-radius: 0 10px 10px 0;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.03);
+      font-family: var(--font-serif);
+      font-size: 1.15rem;
+      font-style: italic;
+      color: var(--navy-800);
+      margin: 1.75rem 0;
+    }
+
+    .bio-skills-panel {
+      background: #ffffff;
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 2rem;
+      box-shadow: 0 4px 16px rgba(15, 42, 67, 0.05);
+    }
+
+    .bio-skills-panel h4 {
+      font-size: 1.2rem;
+      margin: 0 0 1.25rem;
+      color: var(--navy-800);
+      border-bottom: 1px solid var(--border);
+      padding-bottom: 0.75rem;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .skills-block {
+      margin-bottom: 1.35rem;
+    }
+
+    .skills-block:last-child {
+      margin-bottom: 0;
+    }
+
+    .skills-block-label {
+      font-size: 0.78rem;
+      text-transform: uppercase;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      color: var(--accent-text);
+      margin-bottom: 0.4rem;
+    }
+
+    .skills-block-text {
+      font-size: 0.93rem;
+      color: #334155;
+      line-height: 1.55;
+      margin: 0;
+    }
+
+    .lang-chips {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      margin-top: 0.5rem;
+    }
+
+    .lang-chip {
+      background: var(--sand-100);
+      border: 1px solid var(--border);
+      padding: 0.25rem 0.7rem;
+      border-radius: 6px;
+      font-size: 0.82rem;
+      font-weight: 600;
+      color: var(--navy-800);
+    }
+
+    /* Marcos da Carreira - Timeline Section */
+    .timeline-section-bg {
+      background: #fdfbf7;
+      border-top: 1px solid var(--border);
+      border-bottom: 1px solid var(--border);
+    }
+
+    .timeline-wrapper {
+      position: relative;
+      max-width: 900px;
+      margin: 0 auto;
+      padding-left: 2.5rem;
+    }
+
+    .timeline-wrapper::before {
+      content: '';
+      position: absolute;
+      top: 15px;
+      bottom: 25px;
+      left: 14px;
+      width: 3px;
+      background: linear-gradient(180deg, var(--accent) 0%, var(--teal-800) 70%, var(--navy-800) 100%);
+      border-radius: 3px;
+    }
+
+    .timeline-node {
+      position: relative;
+      margin-bottom: 2.25rem;
+    }
+
+    .timeline-node:last-child {
+      margin-bottom: 0;
+    }
+
+    .timeline-marker {
+      position: absolute;
+      left: -2.5rem;
+      top: 6px;
+      width: 20px;
+      height: 20px;
+      background: #ffffff;
+      border: 3.5px solid var(--accent);
+      border-radius: 50%;
+      box-shadow: 0 0 0 4px rgba(180, 117, 20, 0.18);
+      z-index: 2;
+    }
+
+    .timeline-node.highlight .timeline-marker {
+      border-color: var(--teal-800);
+      background: var(--sand-50);
+      box-shadow: 0 0 0 4px rgba(13, 74, 78, 0.22);
+      transform: rotate(45deg);
+      border-radius: 3px;
+    }
+
+    .timeline-card {
+      background: #ffffff;
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 1.5rem 1.75rem;
+      box-shadow: 0 3px 12px rgba(15, 42, 67, 0.04);
+      transition: all 0.25s ease;
+    }
+
+    .timeline-card:hover {
+      transform: translateX(4px);
+      box-shadow: 0 8px 24px rgba(15, 42, 67, 0.08);
+      border-color: #cbd5e1;
+    }
+
+    .timeline-header {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: baseline;
+      justify-content: space-between;
+      gap: 0.5rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .timeline-year-tag {
+      background: rgba(180, 117, 20, 0.12);
+      color: var(--accent-text);
+      font-size: 0.8rem;
+      font-weight: 700;
+      padding: 0.25rem 0.65rem;
+      border-radius: 5px;
+      letter-spacing: 0.03em;
+    }
+
+    .timeline-node.highlight .timeline-year-tag {
+      background: rgba(13, 74, 78, 0.12);
+      color: var(--teal-800);
+    }
+
+    .timeline-role {
+      font-family: var(--font-serif);
+      font-size: 1.25rem;
+      font-weight: 700;
+      color: var(--navy-800);
+      margin: 0;
+    }
+
+    .timeline-desc {
+      font-size: 0.95rem;
+      color: #475569;
+      line-height: 1.65;
+      margin: 0;
+    }
+
+    /* Services Section */
+    .services-bg {
+      background: #f5f2ea;
+      border-top: 1px solid var(--border);
+      border-bottom: 1px solid var(--border);
+    }
+
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1.75rem;
+    }
+
+    .service-card {
+      background: #ffffff;
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 2.25rem 2rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      box-shadow: 0 3px 12px rgba(15, 42, 67, 0.04);
+      transition: all 0.25s ease;
+      position: relative;
+    }
+
+    .service-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 12px 28px rgba(15, 42, 67, 0.09);
+      border-color: rgba(180, 117, 20, 0.4);
+    }
+
+    .service-icon-wrap {
+      width: 52px;
+      height: 52px;
+      border-radius: 12px;
+      background: linear-gradient(135deg, var(--navy-800), var(--teal-800));
+      color: #ffffff;
+      display: grid;
+      place-items: center;
+      margin-bottom: 1.35rem;
+    }
+
+    .service-title {
+      font-size: 1.35rem;
+      margin: 0 0 0.85rem 0;
+      color: var(--navy-800);
+    }
+
+    .service-desc {
+      font-size: 0.95rem;
+      color: #475569;
+      margin-bottom: 1.25rem;
+      line-height: 1.6;
+    }
+
+    .service-bullets {
+      list-style: none;
+      padding: 0;
+      margin: 0 0 1.75rem 0;
+      display: flex;
+      flex-direction: column;
+      gap: 0.65rem;
+    }
+
+    .service-bullets li {
+      font-size: 0.9rem;
+      color: #334155;
+      display: flex;
+      align-items: flex-start;
+      gap: 0.6rem;
+    }
+
+    .bullet-check {
+      color: var(--accent-text);
+      flex-shrink: 0;
+      margin-top: 2px;
+    }
+
+    .service-card-action {
+      margin-top: auto;
+      padding-top: 1rem;
+      border-top: 1px solid #f1f5f9;
+    }
+
+    .btn-service {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.45rem;
+      color: var(--navy-800);
+      font-size: 0.92rem;
+      font-weight: 600;
+      text-decoration: none;
+      transition: all 0.2s ease;
+    }
+
+    .btn-service:hover {
+      color: var(--accent-text);
+      transform: translateX(3px);
+    }
+
+    /* Content / Published Section */
+    .content-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1.75rem;
+    }
+
+    .content-card {
+      background: #ffffff;
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      transition: all 0.25s ease;
+      box-shadow: 0 2px 10px rgba(15, 42, 67, 0.04);
+    }
+
+    .content-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 10px 24px rgba(15, 42, 67, 0.09);
+      border-color: #cbd5e1;
+    }
+
+    .content-header-badge {
+      padding: 1.25rem 1.5rem 0.75rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .content-source-tag {
+      font-size: 0.75rem;
+      font-weight: 700;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      padding: 0.25rem 0.65rem;
+      border-radius: 4px;
+    }
+
+    .tag-blog { background: #e0f2fe; color: #0369a1; }
+    .tag-media { background: #fef3c7; color: #92400e; }
+    .tag-social { background: #fce7f3; color: #9d174d; }
+
+    .content-card-body {
+      padding: 0 1.5rem 1.5rem;
+      display: flex;
+      flex-direction: column;
+      flex: 1;
+    }
+
+    .content-title {
+      font-size: 1.2rem;
+      margin: 0.25rem 0 0.75rem;
+      color: var(--navy-800);
+      line-height: 1.35;
+    }
+
+    .content-snippet {
+      font-size: 0.92rem;
+      color: #64748b;
+      margin-bottom: 1.5rem;
+      flex: 1;
+      line-height: 1.6;
+    }
+
+    .content-card-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      color: var(--teal-800);
+      font-weight: 600;
+      font-size: 0.88rem;
+      text-decoration: none;
+      transition: color 0.2s ease;
+    }
+
+    .content-card-link:hover {
+      color: var(--accent-text);
+      text-decoration: underline;
+    }
+
+    .center-cta-wrap {
+      text-align: center;
+      margin-top: 3rem;
+    }
+
+    /* Keynote / Palestras Section */
+    .palestras-wrapper {
+      background: linear-gradient(135deg, var(--navy-900) 0%, var(--navy-800) 60%, var(--teal-800) 100%);
+      color: #ffffff;
+      border-radius: 20px;
+      padding: 4rem 3rem;
+      position: relative;
+      overflow: hidden;
+      box-shadow: 0 20px 40px rgba(10, 27, 42, 0.35);
+    }
+
+    .palestras-bg-plane {
+      position: absolute;
+      right: -40px;
+      bottom: -40px;
+      opacity: 0.05;
+      pointer-events: none;
+    }
+
+    .palestras-grid {
+      display: grid;
+      grid-template-columns: 1.2fr 0.8fr;
+      align-items: center;
+      gap: 3rem;
+      position: relative;
+      z-index: 2;
+    }
+
+    .palestras-title {
+      color: #ffffff;
+      font-size: clamp(2rem, 3vw, 2.75rem);
+      margin: 0 0 1.25rem;
+      line-height: 1.18;
+    }
+
+    .palestras-p {
+      color: #e2e8f0;
+      font-size: 1.05rem;
+      line-height: 1.7;
+      margin-bottom: 1.75rem;
+    }
+
+    .event-badges-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.75rem;
+      margin-bottom: 2rem;
+    }
+
+    .event-badge-item {
+      background: rgba(255, 255, 255, 0.12);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      padding: 0.45rem 0.9rem;
+      border-radius: 6px;
+      font-size: 0.84rem;
+      color: #f8fafc;
+      font-weight: 500;
+    }
+
+    .palestras-topics {
+      background: rgba(255, 255, 255, 0.07);
+      backdrop-filter: blur(10px);
+      border: 1px solid rgba(255, 255, 255, 0.15);
+      border-radius: 14px;
+      padding: 2rem;
+    }
+
+    .palestras-topics h4 {
+      color: #fbbf24;
+      font-family: var(--font-sans);
+      text-transform: uppercase;
+      font-size: 0.82rem;
+      letter-spacing: 0.1em;
+      margin: 0 0 1rem;
+    }
+
+    .topic-list {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: flex;
+      flex-direction: column;
+      gap: 0.85rem;
+    }
+
+    .topic-list li {
+      font-size: 0.95rem;
+      color: #f1f5f9;
+      display: flex;
+      align-items: center;
+      gap: 0.7rem;
+    }
+
+    /* Contact Section */
+    .contact-grid {
+      display: grid;
+      grid-template-columns: 0.9fr 1.1fr;
+      gap: 3.5rem;
+      align-items: start;
+    }
+
+    .contact-info-panel {
+      background: #ffffff;
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 2.25rem;
+      box-shadow: 0 3px 14px rgba(15, 42, 67, 0.04);
+    }
+
+    .contact-info-title {
+      font-size: 1.45rem;
+      margin: 0 0 0.85rem 0;
+    }
+
+    .contact-info-desc {
+      color: #475569;
+      font-size: 0.98rem;
+      line-height: 1.6;
+      margin-bottom: 2rem;
+    }
+
+    .whatsapp-card {
+      background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+      color: #ffffff;
+      border-radius: 12px;
+      padding: 1.25rem 1.5rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      text-decoration: none;
+      box-shadow: 0 4px 14px rgba(16, 185, 129, 0.25);
+      transition: all 0.2s ease;
+      margin-bottom: 1rem;
+    }
+
+    .whatsapp-card:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 6px 18px rgba(16, 185, 129, 0.35);
+      color: #ffffff;
+    }
+
+    .whatsapp-left {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+    }
+
+    .whatsapp-text-top {
+      font-size: 0.75rem;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      opacity: 0.9;
+    }
+
+    .whatsapp-text-number {
+      font-size: 1.1rem;
+      font-weight: 700;
+      letter-spacing: 0.02em;
+    }
+
+    .email-card {
+      background: var(--sand-100);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 1rem 1.25rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      text-decoration: none;
+      color: var(--navy-800);
+      transition: all 0.2s ease;
+      margin-bottom: 2rem;
+    }
+
+    .email-card:hover {
+      background: #ffffff;
+      border-color: var(--teal-800);
+      transform: translateY(-2px);
+      box-shadow: 0 4px 12px rgba(15, 42, 67, 0.08);
+      color: var(--teal-800);
+    }
+
+    .email-card-left {
+      display: flex;
+      align-items: center;
+      gap: 0.9rem;
+    }
+
+    .email-card-icon {
+      width: 40px;
+      height: 40px;
+      border-radius: 10px;
+      background: rgba(13, 74, 78, 0.1);
+      color: var(--teal-800);
+      display: grid;
+      place-items: center;
+      flex-shrink: 0;
+    }
+
+    .email-card-label {
+      font-size: 0.72rem;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      color: #64748b;
+      font-weight: 600;
+    }
+
+    .email-card-val {
+      font-size: 0.96rem;
+      font-weight: 600;
+      word-break: break-all;
+    }
+
+    /* WhatsApp Floating Button */
+    .whatsapp-float-btn {
+      position: fixed;
+      bottom: 24px;
+      right: 24px;
+      z-index: 1200;
+      width: 58px;
+      height: 58px;
+      border-radius: 50%;
+      background: #25d366;
+      color: #ffffff;
+      display: grid;
+      place-items: center;
+      box-shadow: 0 4px 18px rgba(37, 211, 102, 0.45);
+      text-decoration: none;
+      transition: transform 0.25s ease, box-shadow 0.25s ease;
+      cursor: pointer;
+    }
+
+    .whatsapp-float-btn:hover {
+      transform: scale(1.08) translateY(-3px);
+      box-shadow: 0 8px 24px rgba(37, 211, 102, 0.6);
+      color: #ffffff;
+    }
+
+    .social-links-box {
+      border-top: 1px solid var(--border);
+      padding-top: 1.5rem;
+    }
+
+    .social-links-title {
+      font-size: 0.82rem;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: #64748b;
+      font-weight: 600;
+      margin-bottom: 0.85rem;
+    }
+
+    .social-links-list {
+      display: flex;
+      gap: 0.85rem;
+    }
+
+    .social-icon-btn {
+      width: 44px;
+      height: 44px;
+      border-radius: 10px;
+      background: var(--sand-100);
+      color: var(--navy-800);
+      display: grid;
+      place-items: center;
+      text-decoration: none;
+      border: 1px solid var(--border);
+      transition: all 0.2s ease;
+    }
+
+    .social-icon-btn:hover {
+      background: var(--navy-800);
+      color: #ffffff;
+      transform: translateY(-2px);
+    }
+
+    .form-panel {
+      background: #ffffff;
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 2.5rem;
+      box-shadow: 0 4px 20px rgba(15, 42, 67, 0.05);
+    }
+
+    .form-group {
+      margin-bottom: 1.35rem;
+    }
+
+    .form-label {
+      display: block;
+      font-size: 0.88rem;
+      font-weight: 600;
+      color: #334155;
+      margin-bottom: 0.45rem;
+    }
+
+    .form-control {
+      width: 100%;
+      padding: 0.78rem 1rem;
+      border: 1.5px solid var(--border);
+      border-radius: 8px;
+      font-size: 0.95rem;
+      font-family: var(--font-sans);
+      transition: border-color 0.2s ease, box-shadow 0.2s ease;
+      box-sizing: border-box;
+      background: #ffffff;
+      color: #1e293b;
+    }
+
+    .form-control:focus {
+      outline: none;
+      border-color: var(--teal-800);
+      box-shadow: 0 0 0 3px rgba(13, 74, 78, 0.15);
+    }
+
+    textarea.form-control {
+      min-height: 120px;
+      resize: vertical;
+    }
+
+    .form-status-alert {
+      display: none;
+      padding: 1rem;
+      border-radius: 8px;
+      margin-bottom: 1.25rem;
+      font-size: 0.92rem;
+    }
+
+    .form-status-alert.success {
+      background: #dcfce7;
+      border: 1px solid #86efac;
+      color: #166534;
+      display: flex;
+      align-items: center;
+      gap: 0.6rem;
+    }
+
+    /* Footer */
+    .site-footer {
+      background: var(--navy-900);
+      color: #94a3b8;
+      padding: 3.5rem 1.5rem 2rem;
+      border-top: 1px solid #1e293b;
+    }
+
+    .footer-container {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1.4fr 1fr 1fr;
+      gap: 3rem;
+      margin-bottom: 3rem;
+    }
+
+    .footer-brand-title {
+      font-family: var(--font-serif);
+      font-size: 1.35rem;
+      font-weight: 700;
+      color: #ffffff;
+      margin: 0 0 0.5rem;
+    }
+
+    .footer-brand-tagline {
+      font-size: 0.85rem;
+      color: var(--accent);
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      margin-bottom: 0.85rem;
+    }
+
+    .footer-desc {
+      font-size: 0.9rem;
+      line-height: 1.6;
+      color: #94a3b8;
+      max-width: 360px;
+    }
+
+    .footer-nav-title {
+      color: #ffffff;
+      font-size: 0.92rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      margin-bottom: 1.15rem;
+    }
+
+    .footer-nav-list {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: flex;
+      flex-direction: column;
+      gap: 0.65rem;
+    }
+
+    .footer-nav-link {
+      color: #94a3b8;
+      text-decoration: none;
+      font-size: 0.9rem;
+      transition: color 0.2s ease;
+    }
+
+    .footer-nav-link:hover {
+      color: #ffffff;
+    }
+
+    .footer-bottom {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding-top: 2rem;
+      border-top: 1px solid #1e293b;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 0.85rem;
+      color: #64748b;
+    }
+
+    /* Toast Notification for Simulated Actions */
+    .toast-container {
+      position: fixed;
+      bottom: 24px;
+      right: 24px;
+      z-index: 2000;
+      pointer-events: none;
+    }
+
+    .toast-item {
+      background: var(--navy-900);
+      color: #ffffff;
+      padding: 1rem 1.4rem;
+      border-radius: 10px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
+      border-left: 4px solid var(--accent);
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      font-size: 0.92rem;
+      pointer-events: auto;
+      transform: translateY(20px);
+      opacity: 0;
+      transition: all 0.3s ease;
+    }
+
+    .toast-item.show {
+      transform: translateY(0);
+      opacity: 1;
+    }
+
+    /* Responsive Mobile */
+    @media (max-width: 960px) {
+      .hero-grid,
+      .about-content-grid,
+      .services-grid,
+      .content-grid,
+      .palestras-grid,
+      .contact-grid,
+      .footer-container {
+        grid-template-columns: 1fr;
+        gap: 2.5rem;
+      }
+
+      .credentials-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .hero-section {
+        padding: 3rem 1.25rem 4rem;
+      }
+
+      .section-wrap {
+        padding: 4rem 1.25rem;
+      }
+
+      .palestras-wrapper {
+        padding: 2.5rem 1.5rem;
+      }
+
+      .footer-bottom {
+        flex-direction: column;
+        gap: 1rem;
+        text-align: center;
+      }
+
+      .mobile-menu-toggle {
+        display: block;
+      }
+
+      .nav-menu {
+        position: fixed;
+        top: 65px;
+        left: 0;
+        right: 0;
+        background: #fbfaf7;
+        border-bottom: 1px solid var(--border);
+        flex-direction: column;
+        padding: 1.5rem;
+        gap: 1.25rem;
+        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+        display: none;
+      }
+
+      .nav-menu.is-open {
+        display: flex;
+      }
+
+      .nav-menu .btn-cta-nav {
+        width: 100%;
+        justify-content: center;
+      }
+
+      .timeline-wrapper {
+        padding-left: 2rem;
+      }
+
+      .timeline-marker {
+        left: -2rem;
+        width: 16px;
+        height: 16px;
+      }
+
+      .timeline-wrapper::before {
+        left: 11px;
+      }
+    }
+
+    @media (max-width: 540px) {
+      .credentials-grid {
+        grid-template-columns: 1fr;
+      }
+      .hero-photo, .portrait-monogram {
+        width: 110px;
+        height: 110px;
+        font-size: 2.4rem;
+      }
+      .form-panel, .contact-info-panel {
+        padding: 1.75rem 1.25rem;
+      }
+      .whatsapp-float-btn {
+        bottom: 18px;
+        right: 18px;
+        width: 52px;
+        height: 52px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navigation -->
+  <header class="site-header" id="header">
+    <div class="nav-container">
+      <a href="#hero" class="brand" aria-label="Hugo Lagares - Início">
+        <div class="brand-mark">HL</div>
+        <div class="brand-text">
+          <span class="brand-title">Hugo Lagares</span>
+          <span class="brand-subtitle">Viagens & Negócios</span>
+        </div>
+      </a>
+
+      <!-- Mobile Hamburger -->
+      <button class="mobile-menu-toggle" id="menuToggle" aria-label="Abrir menu de navegação" aria-expanded="false">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <line x1="3" y1="12" x2="21" y2="12"></line>
+          <line x1="3" y1="6" x2="21" y2="6"></line>
+          <line x1="3" y1="18" x2="21" y2="18"></line>
+        </svg>
+      </button>
+
+      <ul class="nav-menu" id="navMenu">
+        <li><a href="#sobre" class="nav-link">Sobre</a></li>
+        <li><a href="#trajetoria" class="nav-link">Trajetória</a></li>
+        <li><a href="#servicos" class="nav-link">Serviços</a></li>
+        <li><a href="#conteudo" class="nav-link">Conteúdo</a></li>
+        <li><a href="#palestras" class="nav-link">Palestras</a></li>
+        <li><a href="#contato" class="nav-link">Contato</a></li>
+        <li>
+          <a href="#contato" class="btn-cta-nav">
+            <span>Vamos conversar</span>
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+              <line x1="5" y1="12" x2="19" y2="12"></line>
+              <polyline points="12 5 19 12 12 19"></polyline>
+            </svg>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </header>
+
+  <main>
+    <!-- 2. Hero Section -->
+    <section class="hero-section" id="hero">
+      <div class="hero-bg-accent" aria-hidden="true"></div>
+      <div class="hero-grid">
+        <div class="hero-content">
+          <div class="hero-eyebrow">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+              <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
+            </svg>
+            <span>Executivo & Palestrante</span>
+          </div>
+          
+          <h1 class="hero-title">Hugo Lagares</h1>
+          <div class="hero-subtitle">Viagens & Negócios — Autoridade em Turismo Brasileiro</div>
+          
+          <p class="hero-impact">
+            Há mais de 23 anos transformando o mercado de turismo brasileiro — construindo operações, formando times e conectando o Brasil aos melhores destinos.
+          </p>
+
+          <div class="hero-credentials-strip">
+            <span>Diretor de operadora</span>
+            <span>•</span>
+            <span>Ranking 100+ Poderosos do Turismo 2025 (PANROTAS)</span>
+            <span>•</span>
+            <span>MBA em Investimentos e Private Banking</span>
+            <span>•</span>
+            <span>Palestrante em eventos do setor</span>
+          </div>
+
+          <div class="hero-actions">
+            <a href="#sobre" class="btn-gold">
+              <span>Conheça minha trajetória</span>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <line x1="12" y1="5" x2="12" y2="19"></line>
+                <polyline points="19 12 12 19 5 12"></polyline>
+              </svg>
+            </a>
+            <a href="#contato" class="btn-outline-navy">
+              <span>Vamos conversar</span>
+            </a>
+          </div>
+        </div>
+
+        <div class="hero-portrait-card">
+          <div class="portrait-frame">
+            <div class="portrait-pattern"></div>
+            
+            <div class="portrait-top">
+              <span class="portrait-badge">Autoridade no Setor</span>
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="rgba(255,255,255,0.7)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="12" cy="12" r="10"></circle>
+                <polygon points="16.24 7.76 14.12 14.12 7.76 16.24 9.88 9.88 16.24 7.76"></polygon>
+              </svg>
+            </div>
+
+            <div class="portrait-center">
+              <div class="portrait-image-wrapper">
+                <img
+                  src="hugo-lagares.jpg"
+                  alt="Hugo Lagares"
+                  class="hero-photo"
+                  onerror="this.style.display='none'; document.getElementById('portraitFallback').style.display='grid';"
+                >
+                <div id="portraitFallback" class="portrait-monogram" style="display: none;" aria-label="Iniciais HL">HL</div>
+              </div>
+              <h3 class="portrait-label">Hugo Lagares</h3>
+              <p class="portrait-desc">Liderança, Visão & Mercado</p>
+            </div>
+
+            <div class="portrait-bottom">
+              <div class="portrait-bottom-icon">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                </svg>
+              </div>
+              <p class="portrait-bottom-text">
+                <strong>Ranking 100+ Poderosos do Turismo 2025</strong><br>
+                Reconhecimento oficial PANROTAS
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 3. Sobre / Biografia -->
+    <section class="section-wrap" id="sobre">
+      <div class="section-header">
+        <span class="section-tag">Biografia & Autoridade</span>
+        <h2 class="section-title">Construindo valor e resultados há mais de 23 anos</h2>
+        <p class="section-lead">Uma trajetória de liderança comprovada na linha de frente e na gestão estratégica das maiores operações do turismo nacional.</p>
+      </div>
+
+      <div class="about-content-grid">
+        <div class="bio-text-column">
+          <p>
+            Com início no turismo em <strong>2003</strong> e mais de <strong>23 anos de estrada</strong>, Hugo Lagares acompanhou e foi protagonista das grandes transformações que moldaram o setor: da digitalização da distribuição à reorganização de redes comerciais e consolidação de grandes players.
+          </p>
+
+          <p>
+            É <strong>Bacharel em Turismo pelo Centro Universitário Newton Paiva (2007)</strong> e possui <strong>MBA em Investimentos e Private Banking pelo Ibmec</strong> — uma formação que alia a essência operacional do mercado à sofisticação financeira exigida para gerir faturamentos expressivos e maximizar margens comerciais.
+          </p>
+
+          <div class="bio-highlight-quote">
+            "O turismo é um negócio de confiança, relacionamentos e velocidade operacional. Vence quem prepara suas pessoas, analisa dados comerciais com rigor e constrói parcerias sólidas de longo prazo."
+          </div>
+
+          <p>
+            Sua atuação abrange os mercados <strong>B2B e B2C de viagens</strong>: montagem e liderança de times de alta performance, abertura e expansão de filiais regionais, prospecção e gestão de key accounts, análise comercial, formatação de produtos e operações turísticas, além de governança rigorosa sobre orçamentos, metas e KPIs.
+          </p>
+
+          <p>
+            Reconhecido no prestigiado <strong>Ranking 100+ Poderosos do Turismo 2025 da PANROTAS</strong>, Hugo é palestrante confirmado no <strong>Travel Next 2026</strong> e em convenções do setor em todo o país, compartilhando visão estratégica em <strong>Português, Inglês e Espanhol</strong>.
+          </p>
+        </div>
+
+        <div class="bio-skills-panel">
+          <h4>
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2L2 7l10 5 10-5-10-5z"></path><path d="M2 17l10 5 10-5"></path><path d="M2 12l10 5 10-5"></path></svg>
+            Síntese Executiva
+          </h4>
+          
+          <div class="skills-block">
+            <div class="skills-block-label">Formação Acadêmica</div>
+            <p class="skills-block-text">
+              • <strong>Bacharel em Turismo</strong> — Centro Universitário Newton Paiva (2007)<br>
+              • <strong>MBA em Investimentos e Private Banking</strong> — Ibmec
+            </p>
+          </div>
+
+          <div class="skills-block">
+            <div class="skills-block-label">Domínio & Competências</div>
+            <p class="skills-block-text">
+              Liderança B2B/B2C, abertura de filiais, gestão de key accounts, precificação & margem, formatação de produtos turísticos, governança orçamentária, metas e KPIs.
+            </p>
+          </div>
+
+          <div class="skills-block">
+            <div class="skills-block-label">Destaque de Mercado</div>
+            <p class="skills-block-text">
+              • Ranking 100+ Poderosos do Turismo 2025 (PANROTAS)<br>
+              • Palestrante Travel Next 2026
+            </p>
+          </div>
+
+          <div class="skills-block">
+            <div class="skills-block-label">Idiomas de Negócios</div>
+            <div class="lang-chips">
+              <span class="lang-chip">Português (Nativo)</span>
+              <span class="lang-chip">Inglês</span>
+              <span class="lang-chip">Espanhol</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Credential Cards Grid -->
+      <div class="credentials-grid">
+        <div class="credential-card">
+          <div class="credential-icon">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M22 10v6M2 10l10-5 10 5-10 5z"></path>
+              <path d="M6 12v5c3 3 9 3 12 0v-5"></path>
+            </svg>
+          </div>
+          <div class="credential-value" style="font-size: 1.15rem;">Bacharel em Turismo — 2007</div>
+          <p class="credential-label">Centro Universitário Newton Paiva & MBA Ibmec</p>
+        </div>
+
+        <div class="credential-card">
+          <div class="credential-icon">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect>
+              <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path>
+            </svg>
+          </div>
+          <div class="credential-value" style="font-size: 1.15rem;">Diretor de Operadora de Turismo</div>
+          <p class="credential-label">Liderança de unidade de negócios e canal multimarcas</p>
+        </div>
+
+        <div class="credential-card">
+          <div class="credential-icon">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="12" cy="8" r="7"></circle>
+              <polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"></polyline>
+            </svg>
+          </div>
+          <div class="credential-value" style="font-size: 1.15rem;">Ranking 100+ Poderosos do Turismo 2025</div>
+          <p class="credential-label">Reconhecimento oficial do trade pela PANROTAS</p>
+        </div>
+
+        <div class="credential-card">
+          <div class="credential-icon">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="12" cy="12" r="10"></circle>
+              <polyline points="12 6 12 12 16 14"></polyline>
+            </svg>
+          </div>
+          <div class="credential-value" style="font-size: 1.15rem;">23+ anos de mercado</div>
+          <p class="credential-label">Atuação contínua gerando resultados e expansão</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- NOVA SEÇÃO: Marcos da Carreira -->
+    <section class="timeline-section-bg" id="trajetoria">
+      <div class="section-wrap">
+        <div class="section-header">
+          <span class="section-tag">Linha do Tempo</span>
+          <h2 class="section-title">Marcos da Carreira</h2>
+          <p class="section-lead">A construção passo a passo de uma liderança consolidada nos bastidores e na direção das principais marcas do turismo nacional.</p>
+        </div>
+
+        <div class="timeline-wrapper">
+          <!-- 2003-2008 -->
+          <div class="timeline-node">
+            <div class="timeline-marker" aria-hidden="true"></div>
+            <div class="timeline-card">
+              <div class="timeline-header">
+                <span class="timeline-year-tag">2003 – 2008</span>
+                <h3 class="timeline-role">Primeiros passos no Turismo</h3>
+              </div>
+              <p class="timeline-desc">
+                Atuação em agências de viagens e outras operadoras, construindo a base de conhecimento do mercado, o relacionamento com agentes e a vivência prática em operações turísticas.
+              </p>
+            </div>
+          </div>
+
+          <!-- 2007 -->
+          <div class="timeline-node">
+            <div class="timeline-marker" aria-hidden="true"></div>
+            <div class="timeline-card">
+              <div class="timeline-header">
+                <span class="timeline-year-tag">2007</span>
+                <h3 class="timeline-role">Bacharel em Turismo</h3>
+              </div>
+              <p class="timeline-desc">
+                Formação acadêmica pelo Centro Universitário Newton Paiva, consolidando os pilares de hospitalidade, geografia do turismo, gestão hoteleira e transportes.
+              </p>
+            </div>
+          </div>
+
+          <!-- 2008-2018 -->
+          <div class="timeline-node">
+            <div class="timeline-marker" aria-hidden="true"></div>
+            <div class="timeline-card">
+              <div class="timeline-header">
+                <span class="timeline-year-tag">2008 – 2018</span>
+                <h3 class="timeline-role">MMTGapnet</h3>
+              </div>
+              <p class="timeline-desc">
+                Entrou em 2008 para abrir e liderar a filial de Belo Horizonte do zero, que se tornou a maior filial da empresa. Assumiu depois a gestão comercial das filiais no Brasil (B2B), por dez anos de expansão e consolidação de liderança comercial nacional.
+              </p>
+            </div>
+          </div>
+
+          <!-- 2018-2021 -->
+          <div class="timeline-node">
+            <div class="timeline-marker" aria-hidden="true"></div>
+            <div class="timeline-card">
+              <div class="timeline-header">
+                <span class="timeline-year-tag">2018 – 2021</span>
+                <h3 class="timeline-role">Visual Turismo / CVC Corp</h3>
+              </div>
+              <p class="timeline-desc">
+                Gerente de vendas regional e gerente comercial, com destacada atuação executiva em Belo Horizonte e São Paulo, conectando carteiras de agentes de alto valor às soluções do grupo.
+              </p>
+            </div>
+          </div>
+
+          <!-- 2021-2023 -->
+          <div class="timeline-node">
+            <div class="timeline-marker" aria-hidden="true"></div>
+            <div class="timeline-card">
+              <div class="timeline-header">
+                <span class="timeline-year-tag">2021 – 2023</span>
+                <h3 class="timeline-role">Diversa Turismo</h3>
+              </div>
+              <p class="timeline-desc">
+                Diretor comercial, liderando estratégias de distribuição B2B, relacionamento institucional com fornecedores internacionais e reestruturação da malha de vendas da operadora.
+              </p>
+            </div>
+          </div>
+
+          <!-- 2023-2026 -->
+          <div class="timeline-node highlight">
+            <div class="timeline-marker" aria-hidden="true"></div>
+            <div class="timeline-card">
+              <div class="timeline-header">
+                <span class="timeline-year-tag">2023 – 2026</span>
+                <h3 class="timeline-role">Visual Turismo — Reconstrução</h3>
+              </div>
+              <p class="timeline-desc">
+                Diretor geral / da unidade de negócios: liderou o processo de reconstrução e o relançamento da operadora no mercado, acumulando também o canal multimarcas da CVC Corp. Encerrou o ciclo em 2026 com a marca plenamente reconstruída e fortalecida.
+              </p>
+            </div>
+          </div>
+
+          <!-- 2026 -->
+          <div class="timeline-node highlight">
+            <div class="timeline-marker" aria-hidden="true"></div>
+            <div class="timeline-card">
+              <div class="timeline-header">
+                <span class="timeline-year-tag">2026</span>
+                <h3 class="timeline-role">Novo Ciclo</h3>
+              </div>
+              <p class="timeline-desc">
+                Dedicação à consultoria estratégica para agências e operadoras, palestras em grandes palcos do setor (incluindo o <strong>Travel Next 2026</strong>) e programas de desenvolvimento de lideranças para o turismo.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 4. Serviços / Consultoria & Parcerias -->
+    <section class="services-bg" id="servicos">
+      <div class="section-wrap">
+        <div class="section-header">
+          <span class="section-tag">Atuação Profissional</span>
+          <h2 class="section-title">Como posso impulsionar sua organização</h2>
+          <p class="section-lead">Soluções pragmáticas com foco em rentabilidade comercial, eficiência e posicionamento estratégico no mercado de viagens.</p>
+        </div>
+
+        <div class="services-grid">
+          <!-- Card A -->
+          <div class="service-card">
+            <div>
+              <div class="service-icon-wrap">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M3 3v18h18"></path>
+                  <path d="m19 9-5 5-4-4-3 3"></path>
+                </svg>
+              </div>
+              <h3 class="service-title">Consultoria para Agências e Operadoras</h3>
+              <p class="service-desc">Alinhamento de modelo de negócio, negociação com fornecedores globais e aceleração de receita sustentável.</p>
+              <ul class="service-bullets">
+                <li>
+                  <svg class="bullet-check" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                  <span>Reestruturação de processos de venda e comissionamento</span>
+                </li>
+                <li>
+                  <svg class="bullet-check" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                  <span>Precificação inteligente e gestão de margem no turismo</span>
+                </li>
+                <li>
+                  <svg class="bullet-check" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                  <span>Posicionamento de portfólio para alta conversão</span>
+                </li>
+              </ul>
+            </div>
+            <div class="service-card-action">
+              <a href="#contato" class="btn-service" data-service="Consultoria para agências e operadoras">
+                <span>Solicitar proposta</span>
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+              </a>
+            </div>
+          </div>
+
+          <!-- Card B -->
+          <div class="service-card">
+            <div>
+              <div class="service-icon-wrap">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M12 1a3 3 0 0 0-3 3v8a3 3 0 0 0 6 0V4a3 3 0 0 0-3-3z"></path>
+                  <path d="M19 10v2a7 7 0 0 1-14 0v-2"></path>
+                  <line x1="12" y1="19" x2="12" y2="23"></line>
+                  <line x1="8" y1="23" x2="16" y2="23"></line>
+                </svg>
+              </div>
+              <h3 class="service-title">Palestras e Treinamentos Executivos</h3>
+              <p class="service-desc">Conteúdo prático, provocativo e alinhado aos desafios reais de eventos como PANROTAS Next, fóruns e convenções.</p>
+              <ul class="service-bullets">
+                <li>
+                  <svg class="bullet-check" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                  <span>Tendências globais e o futuro da intermediação de viagens</span>
+                </li>
+                <li>
+                  <svg class="bullet-check" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                  <span>Técnicas de vendas consultivas para agentes de viagens</span>
+                </li>
+                <li>
+                  <svg class="bullet-check" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                  <span>Keynotes customizadas para convenções corporativas</span>
+                </li>
+              </ul>
+            </div>
+            <div class="service-card-action">
+              <a href="#contato" class="btn-service" data-service="Palestras e treinamentos">
+                <span>Solicitar proposta</span>
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+              </a>
+            </div>
+          </div>
+
+          <!-- Card C -->
+          <div class="service-card">
+            <div>
+              <div class="service-icon-wrap">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                  <circle cx="9" cy="7" r="4"></circle>
+                  <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+                  <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+                </svg>
+              </div>
+              <h3 class="service-title">Construção e Liderança de Times</h3>
+              <p class="service-desc">Expertise comprovada na abertura de filiais regionais, atração de talentos comerciais e formação de líderes de turismo.</p>
+              <ul class="service-bullets">
+                <li>
+                  <svg class="bullet-check" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                  <span>Playbook de expansão territorial e filiais de atendimento</span>
+                </li>
+                <li>
+                  <svg class="bullet-check" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                  <span>Mentoria para gerentes comerciais e diretores de agências</span>
+                </li>
+                <li>
+                  <svg class="bullet-check" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                  <span>Engajamento e metas claras orientadas a rentabilidade</span>
+                </li>
+              </ul>
+            </div>
+            <div class="service-card-action">
+              <a href="#contato" class="btn-service" data-service="Construção e liderança de times">
+                <span>Solicitar proposta</span>
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+              </a>
+            </div>
+          </div>
+
+          <!-- Card D -->
+          <div class="service-card">
+            <div>
+              <div class="service-icon-wrap">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"></path>
+                  <line x1="7" y1="7" x2="7.01" y2="7"></line>
+                </svg>
+              </div>
+              <h3 class="service-title">Parcerias e Projetos Especiais</h3>
+              <p class="service-desc">Conexão qualificada com destinos nacionais e internacionais, redes hoteleiras, receptivos e marcas de viagens.</p>
+              <ul class="service-bullets">
+                <li>
+                  <svg class="bullet-check" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                  <span>Planejamento e liderança de famtours com agentes de alto valor</span>
+                </li>
+                <li>
+                  <svg class="bullet-check" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                  <span>Embaixador de marcas e curadoria de novos destinos</span>
+                </li>
+                <li>
+                  <svg class="bullet-check" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                  <span>Relações institucionais de alto nível com o trade turístico</span>
+                </li>
+              </ul>
+            </div>
+            <div class="service-card-action">
+              <a href="#contato" class="btn-service" data-service="Parcerias e projetos especiais">
+                <span>Solicitar proposta</span>
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 5. Conteúdo / Artigos Publicados -->
+    <section class="section-wrap" id="conteudo">
+      <div class="section-header">
+        <span class="section-tag">O Que Ando Publicando</span>
+        <h2 class="section-title">Análises, artigos e bastidores do trade</h2>
+        <p class="section-lead">Acompanhe minhas publicações sobre negócios, tendências de destinos e estratégias práticas para agentes de viagens.</p>
+      </div>
+
+      <div class="content-grid">
+        <!-- Content 1: Blog -->
+        <div class="content-card">
+          <div class="content-header-badge">
+            <span class="content-source-tag tag-blog">Blog & Artigos</span>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#64748b" stroke-width="2"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path></svg>
+          </div>
+          <div class="content-card-body">
+            <h3 class="content-title">Como agências e agentes podem vender mais no turismo contemporâneo</h3>
+            <p class="content-snippet">
+              Estratégias de vendas de alto valor agregado, atendimento consultivo e técnicas para se diferenciar do comércio eletrônico padronizado.
+            </p>
+            <a href="https://hugolagares.com" target="_blank" rel="noopener noreferrer" class="content-card-link">
+              <span>Ler no hugolagares.com</span>
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+            </a>
+          </div>
+        </div>
+
+        <!-- Content 2: Imprensa e Entrevistas -->
+        <div class="content-card">
+          <div class="content-header-badge">
+            <span class="content-source-tag tag-media">Mídia Especializada</span>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#64748b" stroke-width="2"><polygon points="23 7 16 12 23 17 23 7"></polygon><rect x="1" y="5" width="15" height="14" rx="2" ry="2"></rect></svg>
+          </div>
+          <div class="content-card-body">
+            <h3 class="content-title">Participações na Travel3, PANROTAS, Diário do Turismo e Brasilturis</h3>
+            <p class="content-snippet">
+              Entrevistas exclusivas e debates sobre consolidação do mercado, tendências da aviação comercial e papel das operadoras na retomada das viagens.
+            </p>
+            <div style="display: flex; gap: 0.75rem; flex-wrap: wrap; margin-top: auto;">
+              <a href="https://www.panrotas.com.br" target="_blank" rel="noopener noreferrer" class="content-card-link">
+                <span>PANROTAS</span>
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+              </a>
+              <span style="color: #cbd5e1;">•</span>
+              <a href="https://www.travel3.com.br" target="_blank" rel="noopener noreferrer" class="content-card-link">
+                <span>Travel3</span>
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Content 3: Instagram -->
+        <div class="content-card">
+          <div class="content-header-badge">
+            <span class="content-source-tag tag-social">Instagram @hlagares</span>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#64748b" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
+          </div>
+          <div class="content-card-body">
+            <h3 class="content-title">Viagens & Negócios: Apostas de destinos e bastidores reais</h3>
+            <p class="content-snippet">
+              Cobertura diária de visitas técnicas, feiras de turismo, análises rápidas sobre comportamento de consumo do viajante e hospitalidade.
+            </p>
+            <a href="https://www.instagram.com/hlagares/" target="_blank" rel="noopener noreferrer" class="content-card-link">
+              <span>Acompanhar no @hlagares</span>
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="center-cta-wrap">
+        <a href="https://www.instagram.com/hlagares/" target="_blank" rel="noopener noreferrer" class="btn-outline-navy">
+          <span>Ver todos os conteúdos no Instagram</span>
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </a>
+      </div>
+    </section>
+
+    <!-- 6. Palestras Section -->
+    <section class="section-wrap" id="palestras">
+      <div class="palestras-wrapper">
+        <!-- Background Plane Motif -->
+        <svg class="palestras-bg-plane" width="380" height="380" viewBox="0 0 24 24" fill="currentColor">
+          <path d="M21 16v-2l-8-5V3.5c0-.83-.67-1.5-1.5-1.5S10 2.67 10 3.5V9l-8 5v2l8-2.5V19l-2 1.5V22l3.5-1 3.5 1v-1.5L13 19v-5.5l8 2.5z"/>
+        </svg>
+
+        <div class="palestras-grid">
+          <div>
+            <span style="display: inline-block; color: #fbbf24; text-transform: uppercase; font-size: 0.8rem; font-weight: 700; letter-spacing: 0.12em; margin-bottom: 0.75rem;">
+              Presença de Palco & Eventos
+            </span>
+            <h2 class="palestras-title">Energia, vivência prática e inteligência de mercado no seu palco</h2>
+            <p class="palestras-p">
+              Com mais de 23 anos de bagagem e presença confirmada no <strong>Travel Next 2026</strong>, além de encontros PANROTAS, convenções de redes de agências e famtours executivos, Hugo Lagares combina dados de mercado com histórias reais do trade para inspirar e orientar para a alta performance.
+            </p>
+
+            <div class="event-badges-list">
+              <span class="event-badge-item">Travel Next 2026</span>
+              <span class="event-badge-item">PANROTAS Next</span>
+              <span class="event-badge-item">Convenções de Operadoras</span>
+              <span class="event-badge-item">Fóruns Regionais de Turismo</span>
+            </div>
+
+            <div>
+              <a href="#contato" class="btn-gold" id="btnPalestraCta">
+                <span>Quero Hugo no meu evento</span>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+              </a>
+            </div>
+          </div>
+
+          <div class="palestras-topics">
+            <h4>Temas em Destaque</h4>
+            <ul class="topic-list">
+              <li>
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#fbbf24" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span>A Nova Era do Turismo: Como Vender Experiências</span>
+              </li>
+              <li>
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#fbbf24" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span>Liderança e Retenção de Talentos em Agências</span>
+              </li>
+              <li>
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#fbbf24" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span>Negociação Estratégica entre Operadores & Trade</span>
+              </li>
+              <li>
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#fbbf24" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span>Tendências 2026+: Comportamento do Viajante</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 8. Contato -->
+    <section class="section-wrap" id="contato">
+      <div class="section-header">
+        <span class="section-tag">Contato Direto</span>
+        <h2 class="section-title">Vamos desenhar o próximo passo do seu negócio</h2>
+        <p class="section-lead">Disponível para consultoria executiva, keynotes em convenções, mediação de debates e parcerias comerciais.</p>
+      </div>
+
+      <div class="contact-grid">
+        <!-- Contact Info & Fast WhatsApp -->
+        <div class="contact-info-panel">
+          <h3 class="contact-info-title font-serif">Canais de Atendimento</h3>
+          <p class="contact-info-desc">
+            Seja para levar uma palestra de impacto para sua convenção ou para reestruturar as vendas da sua empresa, envie uma mensagem e responderemos prontamente.
+          </p>
+
+          <!-- WhatsApp Button Card -->
+          <a href="https://wa.me/5511998045930" target="_blank" rel="noopener noreferrer" class="whatsapp-card" aria-label="Falar pelo WhatsApp com Hugo Lagares">
+            <div class="whatsapp-left">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.816 9.816 0 0 0 12.04 2m.01 1.67c2.2 0 4.26.86 5.82 2.42a8.225 8.225 0 0 1 2.41 5.83c0 4.54-3.7 8.24-8.24 8.24-1.48 0-2.93-.4-4.2-1.15l-.3-.18-3.12.82.83-3.04-.2-.31a8.196 8.196 0 0 1-1.26-4.38c0-4.54 3.7-8.24 8.24-8.24m4.52 11.66c-.25-.13-1.47-.72-1.7-.81-.23-.08-.39-.13-.56.13-.17.25-.64.81-.79.97-.14.17-.29.19-.54.06-.25-.13-1.06-.39-2.02-1.25-.75-.67-1.26-1.5-1.41-1.75-.15-.25-.02-.39.11-.51.11-.11.25-.29.37-.44.12-.14.17-.25.25-.42.08-.17.04-.31-.02-.44-.06-.13-.56-1.35-.77-1.85-.2-.49-.41-.42-.56-.43h-.48c-.17 0-.44.06-.67.31-.23.25-.88.86-.88 2.1 0 1.24.9 2.44 1.03 2.61.13.17 1.77 2.7 4.29 3.79.6.26 1.07.41 1.44.53.6.19 1.15.16 1.58.1.48-.07 1.47-.6 1.68-1.18.21-.58.21-1.07.15-1.18-.06-.1-.23-.17-.48-.3z"/>
+              </svg>
+              <div>
+                <div class="whatsapp-text-top">Conversa Imediata</div>
+                <div class="whatsapp-text-number">+55 11 99804-5930</div>
+              </div>
+            </div>
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          </a>
+
+          <!-- Email Direct Card -->
+          <a href="mailto:falecom@hugolagares.com" class="email-card" aria-label="Enviar e-mail para falecom@hugolagares.com">
+            <div class="email-card-left">
+              <div class="email-card-icon">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                  <polyline points="22,6 12,13 2,6"></polyline>
+                </svg>
+              </div>
+              <div>
+                <div class="email-card-label">E-mail Direto</div>
+                <div class="email-card-val">falecom@hugolagares.com</div>
+              </div>
+            </div>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          </a>
+
+          <!-- Social Links -->
+          <div class="social-links-box">
+            <div class="social-links-title">Presença nas Redes</div>
+            <div class="social-links-list">
+              <a href="https://www.instagram.com/hlagares/" target="_blank" rel="noopener noreferrer" class="social-icon-btn" aria-label="Instagram de Hugo Lagares">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                  <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                  <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+                </svg>
+              </a>
+
+              <a href="https://linkedin.com/in/hugolagares" target="_blank" rel="noopener noreferrer" class="social-icon-btn" aria-label="LinkedIn de Hugo Lagares">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
+                  <rect x="2" y="9" width="4" height="12"></rect>
+                  <circle cx="4" cy="4" r="2"></circle>
+                </svg>
+              </a>
+
+              <a href="https://facebook.com/hugolagares" target="_blank" rel="noopener noreferrer" class="social-icon-btn" aria-label="Facebook de Hugo Lagares">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path>
+                </svg>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Contact Form -->
+        <div class="form-panel">
+          <form id="contactForm" action="https://formsubmit.co/falecom@hugolagares.com" method="POST">
+            <!-- Hidden Fields for Formsubmit.co -->
+            <input type="hidden" name="_subject" value="Novo contato pelo site hugolagares.com">
+            <input type="hidden" name="_captcha" value="false">
+            <input type="hidden" name="_template" value="table">
+
+            <div class="form-group">
+              <label for="contactName" class="form-label">Nome Completo</label>
+              <input type="text" id="contactName" name="nome" class="form-control" placeholder="Ex: Roberto Silva" required>
+            </div>
+
+            <div class="form-group">
+              <label for="contactEmail" class="form-label">E-mail Profissional</label>
+              <input type="email" id="contactEmail" name="email" class="form-control" placeholder="Ex: roberto@agenciadeviagens.com.br" required>
+            </div>
+
+            <div class="form-group">
+              <label for="contactSubject" class="form-label">Assunto / Interesse</label>
+              <select id="contactSubject" name="assunto" class="form-control" required>
+                <option value="">Selecione o motivo do contato</option>
+                <option value="Palestras e convenções">Palestra ou participação em evento</option>
+                <option value="Consultoria para agências">Consultoria comercial / operacional</option>
+                <option value="Construção de times e liderança">Liderança e abertura de filiais</option>
+                <option value="Projetos especiais e famtours">Projetos especiais / Parcerias</option>
+                <option value="Outro assunto">Outro assunto</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label for="contactMessage" class="form-label">Mensagem ou Detalhes da Proposta</label>
+              <textarea id="contactMessage" name="mensagem" class="form-control" placeholder="Conte brevemente sobre sua empresa, objetivo, data pretendida ou desafio..." required></textarea>
+            </div>
+
+            <button type="submit" class="btn-gold" style="width: 100%; justify-content: center; padding: 0.95rem;">
+              <span>Enviar mensagem</span>
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="22" y1="2" x2="11" y2="13"></line><polygon points="22 2 15 22 11 13 2 9 22 2"></polygon></svg>
+            </button>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- 9. Footer -->
+  <footer class="site-footer">
+    <div class="footer-container">
+      <div>
+        <div class="footer-brand-title">Hugo Lagares</div>
+        <div class="footer-brand-tagline">Viagens & Negócios — Autoridade em Turismo</div>
+        <p class="footer-desc">
+          Executivo, palestrante e consultor especializado no mercado de turismo brasileiro. Transformando organizações através de liderança, estratégia de vendas e pessoas.
+        </p>
+      </div>
+
+      <div>
+        <div class="footer-nav-title">Navegação Rápida</div>
+        <ul class="footer-nav-list">
+          <li><a href="#sobre" class="footer-nav-link">Sobre Hugo</a></li>
+          <li><a href="#trajetoria" class="footer-nav-link">Trajetória & Marcos</a></li>
+          <li><a href="#servicos" class="footer-nav-link">Serviços & Consultoria</a></li>
+          <li><a href="#conteudo" class="footer-nav-link">Artigos & Publicações</a></li>
+          <li><a href="#palestras" class="footer-nav-link">Palestras em Eventos</a></li>
+          <li><a href="#contato" class="footer-nav-link">Contato & Propostas</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <div class="footer-nav-title">Conecte-se</div>
+        <ul class="footer-nav-list">
+          <li>
+            <a href="mailto:falecom@hugolagares.com" class="footer-nav-link">
+              falecom@hugolagares.com
+            </a>
+          </li>
+          <li>
+            <a href="https://wa.me/5511998045930" target="_blank" rel="noopener noreferrer" class="footer-nav-link">
+              WhatsApp (+55 11 99804-5930)
+            </a>
+          </li>
+          <li>
+            <a href="https://www.instagram.com/hlagares/" target="_blank" rel="noopener noreferrer" class="footer-nav-link">
+              Instagram @hlagares
+            </a>
+          </li>
+          <li>
+            <a href="https://linkedin.com/in/hugolagares" target="_blank" rel="noopener noreferrer" class="footer-nav-link">
+              LinkedIn /in/hugolagares
+            </a>
+          </li>
+          <li>
+            <a href="https://facebook.com/hugolagares" target="_blank" rel="noopener noreferrer" class="footer-nav-link">
+              Facebook /hugolagares
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <div>
+        © 2026 Hugo Lagares — Viagens & Negócios. Todos os direitos reservados.
+      </div>
+      <div>
+        Turismo • Liderança • Estratégia Comercial
+      </div>
+    </div>
+  </footer>
+
+  <!-- Floating WhatsApp Button -->
+  <a
+    href="https://wa.me/5511998045930"
+    target="_blank"
+    rel="noopener noreferrer"
+    class="whatsapp-float-btn"
+    aria-label="Falar no WhatsApp com Hugo Lagares (+55 11 99804-5930)"
+    title="Conversar no WhatsApp"
+  >
+    <svg width="32" height="32" viewBox="0 0 24 24" fill="currentColor">
+      <path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.816 9.816 0 0 0 12.04 2m.01 1.67c2.2 0 4.26.86 5.82 2.42a8.225 8.225 0 0 1 2.41 5.83c0 4.54-3.7 8.24-8.24 8.24-1.48 0-2.93-.4-4.2-1.15l-.3-.18-3.12.82.83-3.04-.2-.31a8.196 8.196 0 0 1-1.26-4.38c0-4.54 3.7-8.24 8.24-8.24m4.52 11.66c-.25-.13-1.47-.72-1.7-.81-.23-.08-.39-.13-.56.13-.17.25-.64.81-.79.97-.14.17-.29.19-.54.06-.25-.13-1.06-.39-2.02-1.25-.75-.67-1.26-1.5-1.41-1.75-.15-.25-.02-.39.11-.51.11-.11.25-.29.37-.44.12-.14.17-.25.25-.42.08-.17.04-.31-.02-.44-.06-.13-.56-1.35-.77-1.85-.2-.49-.41-.42-.56-.43h-.48c-.17 0-.44.06-.67.31-.23.25-.88.86-.88 2.1 0 1.24.9 2.44 1.03 2.61.13.17 1.77 2.7 4.29 3.79.6.26 1.07.41 1.44.53.6.19 1.15.16 1.58.1.48-.07 1.47-.6 1.68-1.18.21-.58.21-1.07.15-1.18-.06-.1-.23-.17-.48-.3z"/>
+    </svg>
+  </a>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      // Mobile Navigation Toggle
+      const menuToggle = document.getElementById('menuToggle');
+      const navMenu = document.getElementById('navMenu');
+      const navLinks = navMenu ? navMenu.querySelectorAll('a') : [];
+
+      if (menuToggle && navMenu) {
+        menuToggle.addEventListener('click', function() {
+          const isOpen = navMenu.classList.toggle('is-open');
+          menuToggle.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+        });
+
+        navLinks.forEach(link => {
+          link.addEventListener('click', function() {
+            if (navMenu.classList.contains('is-open')) {
+              navMenu.classList.remove('is-open');
+              menuToggle.setAttribute('aria-expanded', 'false');
+            }
+          });
+        });
+      }
+
+      // Pre-select contact subject when clicking "Solicitar proposta"
+      const serviceProposalButtons = document.querySelectorAll('.btn-service');
+      const contactSubject = document.getElementById('contactSubject');
+
+      serviceProposalButtons.forEach(btn => {
+        btn.addEventListener('click', function() {
+          const serviceName = this.getAttribute('data-service') || '';
+          if (contactSubject) {
+            if (serviceName.includes('Consultoria')) {
+              contactSubject.value = 'Consultoria para agências';
+            } else if (serviceName.includes('Palestras')) {
+              contactSubject.value = 'Palestras e convenções';
+            } else if (serviceName.includes('Construção')) {
+              contactSubject.value = 'Construção de times e liderança';
+            } else if (serviceName.includes('Parcerias')) {
+              contactSubject.value = 'Projetos especiais e famtours';
+            }
+          }
+        });
+      });
+
+      // Palestra CTA directly selects 'Palestras'
+      const btnPalestraCta = document.getElementById('btnPalestraCta');
+      if (btnPalestraCta && contactSubject) {
+        btnPalestraCta.addEventListener('click', function() {
+          contactSubject.value = 'Palestras e convenções';
+        });
+      }
+    });
+  </script>
+<script>
+/* Skip artifact shell — fixed helpers served beside every artifact. */
+(function () {
+  "use strict";
+
+  var fmt = {
+    num: function (v, opts) { return new Intl.NumberFormat("pt-BR", opts || {}).format(v); },
+    brl: function (v) { return new Intl.NumberFormat("pt-BR", { style: "currency", currency: "BRL" }).format(v); },
+    pct: function (v) { return new Intl.NumberFormat("pt-BR", { style: "percent", maximumFractionDigits: 1 }).format(v); }
+  };
+
+  // axisFmt keeps axis tick labels short (compact notation) so long values
+  // (e.g. full BRL amounts) never clip against the plot edge.
+  function axisFmt(v) {
+    return fmt.num(v, { notation: "compact", maximumFractionDigits: 1 });
+  }
+
+  // format accepts a function OR one of the fmt names ("num" | "brl" | "pct").
+  function coerceFormat(spec) {
+    if (typeof spec === "function") return spec;
+    if (typeof spec === "string" && fmt[spec]) return fmt[spec];
+    return function (v) { return fmt.num(v); };
+  }
+
+  function accent() {
+    return getComputedStyle(document.documentElement).getPropertyValue("--accent").trim() || "#2563eb";
+  }
+  function mutedColor() {
+    return getComputedStyle(document.documentElement).getPropertyValue("--text-muted").trim() || "#5b6472";
+  }
+  function svgEl(tag, attrs) {
+    var el = document.createElementNS("http://www.w3.org/2000/svg", tag);
+    for (var k in attrs) el.setAttribute(k, attrs[k]);
+    return el;
+  }
+  function frame(el, w, h) {
+    var svg = svgEl("svg", { viewBox: "0 0 " + w + " " + h, role: "img" });
+    el.innerHTML = "";
+    el.appendChild(svg);
+    return svg;
+  }
+
+  // maxOf guards the axis scale: empty values would give -Infinity (truthy,
+  // so "|| 1" can't catch it) and a non-positive max would flip the chart.
+  function maxOf(values) {
+    var m = values.length ? Math.max.apply(null, values) : 0;
+    return m > 0 ? m : 1;
+  }
+
+  // bar(el, {labels:[], values:[], color?, format?}) — vertical bar chart.
+  function bar(el, cfg) {
+    var W = 640, H = 280, padL = 46, padB = 30, padT = 12;
+    var svg = frame(el, W, H);
+    var max = maxOf(cfg.values);
+    var n = cfg.values.length;
+    var plotW = W - padL - 12, plotH = H - padT - padB;
+    var step = plotW / n, bw = Math.min(step * 0.62, 64);
+    var color = cfg.color || accent();
+    var f = coerceFormat(cfg.format);
+    for (var g = 0; g <= 4; g++) {
+      var gy = padT + plotH - (plotH * g) / 4;
+      svg.appendChild(svgEl("line", { x1: padL, y1: gy, x2: W - 12, y2: gy, stroke: "currentColor", "stroke-opacity": 0.08 }));
+      var lbl = svgEl("text", { x: padL - 8, y: gy + 4, "text-anchor": "end", "font-size": 10, fill: mutedColor() });
+      lbl.textContent = axisFmt((max * g) / 4);
+      svg.appendChild(lbl);
+    }
+    cfg.values.forEach(function (v, i) {
+      var bh = Math.max(0, (v / max) * plotH);
+      var x = padL + i * step + (step - bw) / 2;
+      var y = padT + plotH - bh;
+      var r = svgEl("rect", { x: x, y: y, width: bw, height: bh, rx: 4, fill: color });
+      var t = svgEl("title", {});
+      t.textContent = cfg.labels[i] + ": " + f(v);
+      r.appendChild(t);
+      svg.appendChild(r);
+      var tx = svgEl("text", { x: x + bw / 2, y: H - 10, "text-anchor": "middle", "font-size": 11, fill: mutedColor() });
+      tx.textContent = cfg.labels[i];
+      svg.appendChild(tx);
+    });
+  }
+
+  // line(el, {labels:[], values:[], color?, format?}) — single-series line.
+  function line(el, cfg) {
+    var W = 640, H = 280, padL = 46, padB = 30, padT = 12;
+    var svg = frame(el, W, H);
+    var max = maxOf(cfg.values);
+    var n = cfg.values.length;
+    var plotW = W - padL - 16, plotH = H - padT - padB;
+    var color = cfg.color || accent();
+    var f = coerceFormat(cfg.format);
+    for (var g = 0; g <= 4; g++) {
+      var gy = padT + plotH - (plotH * g) / 4;
+      svg.appendChild(svgEl("line", { x1: padL, y1: gy, x2: W - 16, y2: gy, stroke: "currentColor", "stroke-opacity": 0.08 }));
+      var lbl = svgEl("text", { x: padL - 8, y: gy + 4, "text-anchor": "end", "font-size": 10, fill: mutedColor() });
+      lbl.textContent = axisFmt((max * g) / 4);
+      svg.appendChild(lbl);
+    }
+    var pts = cfg.values.map(function (v, i) {
+      var x = padL + (n === 1 ? plotW / 2 : (plotW * i) / (n - 1));
+      var y = padT + plotH - (v / max) * plotH;
+      return [x, y];
+    });
+    var d = pts.map(function (p, i) { return (i ? "L" : "M") + p[0].toFixed(1) + " " + p[1].toFixed(1); }).join(" ");
+    svg.appendChild(svgEl("path", { d: d, fill: "none", stroke: color, "stroke-width": 2, "stroke-linejoin": "round" }));
+    pts.forEach(function (p, i) {
+      var c = svgEl("circle", { cx: p[0], cy: p[1], r: 3.5, fill: color });
+      var t = svgEl("title", {});
+      t.textContent = cfg.labels[i] + ": " + f(cfg.values[i]);
+      c.appendChild(t);
+      svg.appendChild(c);
+      var tx = svgEl("text", { x: p[0], y: H - 10, "text-anchor": "middle", "font-size": 11, fill: mutedColor() });
+      tx.textContent = cfg.labels[i];
+      svg.appendChild(tx);
+    });
+  }
+
+  // donut(el, {labels:[], values:[], colors?}) — donut with center total.
+  function donut(el, cfg) {
+    var W = 320, H = 280, cx = W / 2, cy = H / 2, R = 92, r = 58;
+    var svg = frame(el, W, H);
+    var total = cfg.values.reduce(function (a, b) { return a + b; }, 0) || 1;
+    var palette = cfg.colors || [accent(), "#1baf7a", "#eda100", "#e34948", "#4a3aa7", "#e87ba4"];
+    var a0 = -Math.PI / 2;
+    cfg.values.forEach(function (v, i) {
+      var a1 = a0 + (v / total) * Math.PI * 2;
+      var large = a1 - a0 > Math.PI ? 1 : 0;
+      var p = ["M", cx + R * Math.cos(a0), cy + R * Math.sin(a0),
+        "A", R, R, 0, large, 1, cx + R * Math.cos(a1), cy + R * Math.sin(a1),
+        "L", cx + r * Math.cos(a1), cy + r * Math.sin(a1),
+        "A", r, r, 0, large, 0, cx + r * Math.cos(a0), cy + r * Math.sin(a0), "Z"].join(" ");
+      var path = svgEl("path", { d: p, fill: palette[i % palette.length] });
+      var t = svgEl("title", {});
+      t.textContent = cfg.labels[i] + ": " + fmt.num(v) + " (" + fmt.pct(v / total) + ")";
+      path.appendChild(t);
+      svg.appendChild(path);
+      a0 = a1;
+    });
+    var center = svgEl("text", { x: cx, y: cy + 5, "text-anchor": "middle", "font-size": 20, "font-weight": 650, fill: "currentColor" });
+    center.textContent = fmt.num(total);
+    svg.appendChild(center);
+  }
+
+  window.skipShell = { fmt: fmt };
+  window.skipChart = { bar: bar, line: line, donut: donut };
+})();
+
+</script>
+</body>
+</html>
